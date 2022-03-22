@@ -24,83 +24,97 @@
     font-family: 'Maven Pro', Arial, Helvetica, sans-serif ;
 }
 
-header {
-    width: 100%;
-    height: 70px;
-    padding: 0 30px;
-}
-ul {
-    list-style: none;
-    height: 70px;
-    display: grid;
-    grid-template-columns: 200px repeat(4, minmax(100px,1fr)) 200px;
-    gap: 0.5em;
-    align-content: center;  
-    justify-content: center;
-}
-ul li {
-    display: inline-block;
-}
-
-
 .con {
+    width: 100%;
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(8, 100px) ;
-   
-    grid-template-rows: repeat(4, 100px);
-    gap: 0.5em;
     justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(8, 200px);
+    grid-template-rows: 50px 200px 200px 200px 200px 50px;
+    gap: .4em;
+    grid-template-areas: 
+    "L L n1 n2 n3 n4 M M"
+    "A B . . . . I I"
+    ". . F . E . I I"
+    "H H . G . D . ."
+    "H H . . . . C ."
+    "W . . . . Z . ."
+    ;
+}
+.heading {
+    grid-column: 4 / 7;
+    grid-row: 3 / 4;
+    z-index: 1;
+}
+
+.top {
+   font-size: 1.5rem;
+    padding: 10px 0 0 10px;
+}
+
+h1 {
+    font-size: 9.5em;
+    color: red;
+    font-weight: 400;
+    letter-spacing: 5px;
+    
 }
 img {
     width: 100%;
-    height: 100%; 
-    object-position: center;   
+    height: 100%;
     object-fit: cover;
-}
-h1 {
-    font-size: 5rem;
-    font-weight: 400;
-    color: red;
-    grid-column: 4 / 7;
-    grid-row: 2 / 3;
- }
- div {
-     width: 100%;
-     grid-column: 4 / 7;
-     grid-row: 2 / 3;
- }
-img:nth-of-type(3){
-    grid-column: 7 / 8;
-    grid-row: 4 / 5;
-}
-img:nth-of-type(4){
-    grid-column: 6 / 7;
-    grid-row: 3 / 4;
-}
-img:nth-of-type(5){
-    grid-column: 5 / 6;
-    grid-row: 2 / 3;
-}
-img:nth-of-type(6){
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-}
-img:nth-of-type(7){
-    grid-column: 4 / 5;
-    grid-row: 3 / 4;
-}
-img:nth-of-type(8){
-    grid-column: 1 / 3;
-    grid-row: 3 / 5;
-}
-img:nth-of-type(9){
-    grid-column: 7 / 9;
-    grid-row: 1 / 3;
+    object-position: center;
 }
 
-
-
-footer {
-    width: 100%;
-    height: 70px;
+.logo {
+    grid-area: L;
+}
+.nav1 {
+    grid-area: n1;
+}
+.nav2 {
+    grid-area: n2;
+}
+.nav3 {
+    grid-area: n3;
+}
+.nav4 {
+    grid-area: n4;
+}
+.menu{
+    grid-area: M;
+}
+.i1 {
+    grid-area: A;
+}
+.i2 {
+    grid-area: B;
+}
+.i3 {
+    grid-area: C;
+}
+.i4 {
+    grid-area: D;
+}
+.i5{
+    grid-area: E;
+}
+.i6 {
+    grid-area: F;
+}
+.i7 {
+    grid-area: G;
+}
+.i8 {
+    grid-area: H;
+}
+.i9 {
+    grid-area: I;
+}
+.f1 {
+    grid-area: W;
+}
+.f2 {
+    grid-area: Z;
 }
