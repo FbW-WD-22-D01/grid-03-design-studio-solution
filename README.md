@@ -1,4 +1,4 @@
-# Grid Design Studio
+# Grid Design Studio - Solution
 
 Ihr habt den Auftrag erhalten, die neue Homepage für das Designstudio _Rimrod & Harris_ zu erstellen. Unten seht Ihr das Mockup für die Website. 
 -
